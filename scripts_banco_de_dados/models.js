@@ -1,6 +1,5 @@
 const { Sequelize } = require('sequelize');
-const {sequelize} = require('./conexao.bancodedados')
-
+const { sequelize } = require('./database');
 
 const Produto = sequelize.define('Produto', {
     id: {
@@ -16,7 +15,23 @@ const Produto = sequelize.define('Produto', {
     },
 });
 
+const User = sequelize.define('User', {
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    username: {
+        type: Sequelize.STRING
+    },
+    email: {
+        type: Sequelize.STRING
+    },
+    password: {
+        type: Sequelize.STRING
+    }
+});
 
-sequelize.sync() // ESSE CARA AO USAR .sync() VAI GERAR AS TABELAS QUE VCS DECLARAREM AQUI
+sequelize.sync();
 
-module.exports = {Produto};
+module.exports = { Produto, User };

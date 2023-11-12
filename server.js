@@ -1,8 +1,14 @@
 const express = require('express');
 const { PORT } = require('./variaveis_shared/environment');
-const ExampleRouteLoader = require('./routes/example.router.loader');
+const RouteLoader = require('./routes/router.loader');
 const app = express();
+const cors = require('cors')
 
+const corsOptions = {
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
+}
+app.use(cors(corsOptions))
 app.use(express.json());
 app.use(express.static(__dirname));
 
@@ -10,13 +16,18 @@ app.post('/login', (req, res) => {
     const { email, username, password } = req.body;
 
     if (email === 'jeiejeusb@gmail.com' && username === 'Mateus Cardoso' && password === '1234') {
-        res.redirect('/dashboard.html');
+        res.redirect('/products.html'); 
     } else {
-        res.status(401).json({ message: 'Conta não encontrada, cheque se tudo está escrito corretamente, ou crie uma nova conta' });
+        res.status(401).json({ message: 'Credenciais incorretas' });
     }
 });
 
-ExampleRouteLoader.load(app);
+
+app.get('/close-popup', (req, res) => {
+    res.send('closed');
+});
+
+RouteLoader.load(app);
 
 app.listen(PORT, aoLigarServidor);
 

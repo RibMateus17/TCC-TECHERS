@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Editar Produtos</title>
+</head>
+<body>
+    <div class="edit-product-container">
+        <h1>Editar Produtos</h1>
+        <form id="productForm">
+            <label for="productName">Nome do Produto:</label>
+            <input type="text" id="productName" required>
+
+            <label for="productQuantity">Quantidade:</label>
+            <input type="number" id="productQuantity" required>
+
+            <label for="productPriceBuy">Preço de Compra:</label>
+            <input type="number" id="productPriceBuy" required>
+
+            <label for="productPriceSell">Preço de Venda:</label>
+            <input type="number" id="productPriceSell" required>
+
+            <button type="submit">Adicionar Produto</button>
+        </form>
+    </div>
+
+    <script src="editProducts.js"></script>
+</body>
+</html>
