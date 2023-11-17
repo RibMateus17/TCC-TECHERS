@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%);
+    background: linear-gradient(to bottom right, #a3bded 0%, #6991c7 100%);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;

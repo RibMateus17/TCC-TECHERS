@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Tela de Login</title>
 </head>
 <body>
@@ -19,14 +19,15 @@
         </div>
     </div>
 
-    <!-- Pop-up de aviso -->
     <div id="popup" class="popup">
         <span class="close" id="closePopup">&times;</span>
         <p id="popupText">Usuário ou senha incorretos. Por favor, verifique suas credenciais.</p>
     </div>
-    
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
+        const LOGIN_URL = 'http://localhost:3000/user/login';
+
         document.addEventListener('DOMContentLoaded', () => {
             const loginForm = document.getElementById('loginForm');
             const popup = document.getElementById('popup');
@@ -35,12 +36,12 @@
             loginForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
-                const emailInput = 'jeiejeusb@gmail.com';
-                const usernameInput = 'Mateus Cardoso';
-                const passwordInput = '1234';
+                const emailInput = document.getElementById("emailInput").value;
+                const usernameInput = document.getElementById("usernameInput").value;
+                const passwordInput = document.getElementById("passwordInput").value;
 
                 try {
-                    const response = await axios.post('http://localhost:4500/login', {
+                    const response = await axios.post(LOGIN_URL, {
                         email: emailInput,
                         username: usernameInput,
                         password: passwordInput
@@ -51,7 +52,7 @@
                     popup.style.display = 'block';
                 }
             });
-
+            
             const closePopup = document.getElementById('closePopup');
 
             closePopup.addEventListener('click', () => {

@@ -1,3 +1,0 @@
-Adicionar um sistema que faça com que veja a quantidade de produtos
-comprados pelo comércio, e a quantidade vendida, calculando o valor em ambos
-casos 

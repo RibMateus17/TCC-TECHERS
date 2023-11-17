@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Editar Produtos</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="editProducts.js" defer></script>
 </head>
 <body>
     <div class="edit-product-container">
@@ -22,10 +25,11 @@
             <label for="productPriceSell">Preço de Venda:</label>
             <input type="number" id="productPriceSell" required>
 
+            <label for="productImage">Imagem do produto:</label>
+            <input type="file" accept="image/png, image/jpeg" id="productImage" required />
+
             <button type="submit">Adicionar Produto</button>
         </form>
     </div>
-
-    <script src="editProducts.js"></script>
 </body>
 </html>
