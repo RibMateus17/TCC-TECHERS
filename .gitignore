@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
+/backend/files-storage
 .pnp.js
 
 # testing

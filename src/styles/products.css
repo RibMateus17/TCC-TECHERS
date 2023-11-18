@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+.edit-product-body {
+  align-items: center;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  /* border: 2px solid green; */
+}
+
+.product-body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* border: 1px solid black; */
+}
+
+.product-container {
+  justify-content: center;
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+.product-list {
+  display: flex;
+  /* border: 2px solid red; */
+}
+
+.product-container button {
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.product-container button:active,
+.product-container button:focus {
+  outline: none;
+}
+
+.product-container button:hover {
+  background-position: -20px -20px;
+}
+
+.product-container button:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+
+.product-card img {
+  height: 200px;
+}
+
+.product-card {
+  background-color: rgba(192, 198, 211, 1);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.product-info {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.product-info * {
+  margin-left: 4px;
+}
